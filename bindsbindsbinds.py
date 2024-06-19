@@ -68,6 +68,7 @@ def switch_to_keyset(keysets, keyset_name):
     keyset = keysets[keyset_name]
     global mouse_binds_in_current_keyset
     
+    # So that it's possible to alt-tab out of the game
     keyboard.add_hotkey('alt+tab', keyboard.send, args=['alt+tab'])
 
     mouse.hook(handle_mouse)
