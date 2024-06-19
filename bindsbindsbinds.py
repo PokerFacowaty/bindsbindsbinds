@@ -67,6 +67,8 @@ def switch_to_keyset(keysets, keyset_name):
     bind_keysets(keysets)
     keyset = keysets[keyset_name]
     global mouse_binds_in_current_keyset
+    
+    keyboard.add_hotkey('alt+tab', keyboard.send, args=['alt+tab'])
 
     mouse.hook(handle_mouse)
 
